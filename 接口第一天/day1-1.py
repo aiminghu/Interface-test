@@ -29,8 +29,22 @@ def sortSore():
 #定义一个列表，从键盘中输入一个随机数，判断该数是不是在列表中
 def readList():
     lists = ["a",23,34,56,667,'b','c']
-    li = input("")
+    li = input("从键盘上输入一个随机数：")
+    try:
+        a = int(li)
+        if a in lists:
+            print("在列表中")
+    except:
+        if li in lists:
+            print("在列表中")
+        else:
+            print("不在列表中")
+
+
+
+
 
 
 if __name__ == '__main__':
-    sortSore()
+    # sortSore()
+    readList()
