@@ -40,11 +40,24 @@ def readList():
         else:
             print("不在列表中")
 
+#求10的阶乘  阶乘的公式：n! =1*2*3*..n   or n! =n*(n-1)!
+def get_factorial(num):
+    fac = 1
+    if num <0:
+        print("负数没有阶乘")
+    elif num == 0:
+        print("0的阶乘等于1")
+    else:
+     for i in range(1,num+1):
+         fac = fac*i
+     print("%d 的阶乘为 %d" % (num, fac))
 
-
+#求100以内能被3整除的数，并将作为列表输出
+#思路：1,定义一个空列表 2，循环添加被3整除的数 3，输出
 
 
 
 if __name__ == '__main__':
     # sortSore()
-    readList()
+    # readList()
+    get_factorial(1)
