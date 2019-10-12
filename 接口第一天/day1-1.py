@@ -54,10 +54,54 @@ def get_factorial(num):
 
 #求100以内能被3整除的数，并将作为列表输出
 #思路：1,定义一个空列表 2，循环添加被3整除的数 3，输出
+def get_three():
+    li = []
+    for i in range(1,101):
+        if i%3 == 0:
+            li.append(i)
+    print(li)
 
+#将列表去重[1,2,3,4,3,4,2,5,5,8,9,7]
+#思路1，新建一个列表，循环遍历，不在新列表里就添加进去 2,输出
+def del_duplicate():
+    a = [1,2,3,4,3,4,2,5,5,8,9,7]
+    b = []
+    for i in range(len(a)):
+        if a[i] not in b:
+            b.append(a[i])
+    print(b)
 
+#求斐波那契数列 1 1 2 3 5 8 13
+#思路：n=1,[1] n=2,[1,1]  n=3 [1,1,1+1]
 
+def fib(n):
+    if n == 1:
+        return [1]
+    if n == 2:
+        return [1, 1]
+    fibs = [1, 1]
+    for i in range(2, n):
+        fibs.append(fibs[-1] + fibs[-2])
+    return fibs
+
+#求10000以内的质数  质数：大于1的自然数，除了1和它本身不能被任何数整除
+#思路 能被2
+def zs():
+    num = []
+    i = 2
+    for i in range(2, 10000):
+        j = 2
+        for j in range(2, i):
+            if (i % j == 0):
+                break
+        else:
+            num.append(i)
+    print(num)
 if __name__ == '__main__':
     # sortSore()
     # readList()
-    get_factorial(1)
+    # get_factorial(1)
+    # get_three()
+    # del_duplicate()
+    # print(fib(50))
+    zs()
