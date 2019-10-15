@@ -97,6 +97,10 @@ def zs():
         else:
             num.append(i)
     print(num)
+def zs_1():
+    L1 = range(1,101)
+    m = 2
+
 if __name__ == '__main__':
     # sortSore()
     # readList()

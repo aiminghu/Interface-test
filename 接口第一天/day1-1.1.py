@@ -38,4 +38,6 @@ class Myclass:
 x = Myclass()
 
 #访问类的属性和方法
-print("Myclass")
+print("Myclass类的属性i为",x.i)
+print('Myclass类的方法 f 输出为：',x.f())
+
