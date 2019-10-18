@@ -31,16 +31,17 @@ a.sleep()
 
 class Student():
 
-    def __init__(self,name,kecheng,sno):
+    def __init__(self,name,sno):
         print('执行init方法')
         self.name = name
-        self.kecheng = kecheng
         self.sno = sno
 
-    def study(self):
-        print(self.name,'学习',self.kecheng)
-    def study_1(self):
-        print('学号为'+self.sno+'的学生，学习'+self.kecheng)
-b = Student('白雪','Python','10010')
-b.study()
-b.study_1()
+    def study(self,kecheng):
+        print(self.name,'学习',kecheng)
+    def study_1(self,kecheng):
+        print('学号为'+self.sno+'的学生，学习'+kecheng)
+b = Student('白雪','Python')
+b.study('python')
+b.study_1('python')
+
+
