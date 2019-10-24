@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time : 2019/10/18 0018 下午 14:31 
 # @Author : aiminhu
-# @File : Day2.py 
+# @File : Day2-homework-类.py
 # @Software: PyCharm
 
 #打印小猫爱吃鱼，小猫爱喝水
