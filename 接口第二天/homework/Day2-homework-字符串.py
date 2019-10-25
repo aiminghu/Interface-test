@@ -16,40 +16,41 @@ Lily|18301911734|男|19870210
 任务3-找出所有女性用户的信息
 
 '''
-
-with open('E:\新建文件夹\zuoye\接口第二天\data1.txt','r',encoding='utf-8') as read_file:
-    files = read_file.readlines()
-    # 读取文件全部内容
-l = []
-for i in files:
-    l.append(i.replace('\n',''))
-# print(l)
-data = []
-for i in range(len(l)):
-    data = data + l[i].split('|')
-
 # 任务1-找出所有L开头的人名
-name = []
-for i in data:
-    if i.startswith('L'):
-        name.append(i)
-print('文件中L开头的人名有：',name)
+with open('../data1.txt','r',encoding='utf-8') as read_file:
+    data = read_file.readlines()
+    # 读取文件全部内容
+    name = []
+    for i in data:
+        i = i.replace('\n','')
+        li = i.split('|')[0]
+        if li.startswith('L'):
+            name.append(li)
+    print('文件中L开头的人名有：',name)
+
 
 # 任务2-按照年龄进行排序
-age = []
-for i in l:
-    age.append(i)
-print(age)
-for i in range(len(age)):
-    if i <=len(l):
-        a=int(age[i][-8:-1:])
-        b = int(age[i+1][-8:-1:])
-        print(a,b)
-        if a < b: #判断年龄大小然后交换数据，index超出范围
-            c = age[i]
-            age[i] = age[i+1]
-            age[i+1] = c
-
-
-
-print(age)
+str_list = []
+with open('../data1.txt','r+',encoding='utf-8') as f:
+    for i in f.readlines():
+        i = i.strip('\n')
+        str_list.append(i)
+    # print(str_list)
+li = sorted(str_list,key=lambda x:x[-8:])
+print(li)
+'''
+#返回一个元祖，排列顺序为：先对比所有元祖的第一个元素，在对比第二个。
+# reverse参数为False，为升序排列
+key=lambda 元素: 元素[字段索引]
+比如   print(sorted(C, key=lambda x: x[2]))   
+x:x[]字母可以随意修改，排序方式按照中括号[]里面的维度进行排序，[0]按照第一维排序，[2]按照第三维排序
+'''
+# 任务3-找出所有女性用户的信息
+famale = []
+with open('../data1.txt','r+',encoding='utf-8') as f:
+    data = f.readlines()
+    for i in data:
+        # print(i.split('|')[2])
+        if i.split('|')[2] == '女':
+            famale.append(i)
+    print("文件中女性用户的信息为:",famale)

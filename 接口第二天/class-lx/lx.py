@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time : 2019/10/13 0013 上午 10:46 
 # @Author : aiminhu
-# @File : lx.py 
+# @File : class_lx.py
 # @Software: PyCharm
 #循环
 #循环四要素：
